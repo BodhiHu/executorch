@@ -95,6 +95,12 @@ Alternatively, if you would like to experiment with ExecuTorch quickly and easil
    ./install_executorch.sh
    ```
 
+   You can pass custom cmake args, .etc:
+   ```bash
+   CMAKE_ARGS="-DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++" \
+     ./install_executorch.sh
+   ```
+
    Use the [`--pybind` flag](https://github.com/pytorch/executorch/blob/main/install_executorch.sh#L26-L29) to install with pybindings and dependencies for other backends.
    ```bash
    ./install_executorch.sh --pybind <coreml | mps | xnnpack>
